@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+                             http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>EmployeeManagementSystem</display-name>
+
+    <!-- AddEmployee Servlet -->
+    <servlet>
+        <servlet-name>AddEmployee</servlet-name>
+        <servlet-class>CRUDEmployee.AddEmployee</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddEmployee</servlet-name>
+        <url-pattern>/AddEmployee</url-pattern>
+    </servlet-mapping>
+
+    <!-- EditEmployee Servlet -->
+    <servlet>
+        <servlet-name>EditEmployee</servlet-name>
+        <servlet-class>CRUDEmployee.EditEmployee</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditEmployee</servlet-name>
+        <url-pattern>/EditEmployee</url-pattern>
+    </servlet-mapping>
+
+    <!-- DeleteEmployee Servlet -->
+    <servlet>
+        <servlet-name>DeleteEmployee</servlet-name>
+        <servlet-class>CRUDEmployee.DeleteEmployee</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteEmployee</servlet-name>
+        <url-pattern>/DeleteEmployee</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- ViewEmployees (optional) -->
+    <servlet>
+        <servlet-name>ViewEmployees</servlet-name>
+        <servlet-class>CRUDEmployee.ViewEmployees</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewEmployees</servlet-name>
+        <url-pattern>/ViewEmployees</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome file (redirects to index.jsp or dashboard.jsp) -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>
